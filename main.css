@@ -18,11 +18,11 @@ body {
 
 h1 {
 	text-align: center;
+	margin-left: 40px;
 }
 
 h2 {
 	position: relative;
-	margin-left: 40px;
 }
 
 h2::after {
