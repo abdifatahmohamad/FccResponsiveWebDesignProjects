@@ -47,7 +47,7 @@ ul li {
 	background-color: #fff;
 	box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.15);
 	margin: 20px;
-	width: 350px;
+	width: 400px;
 }
 
 ul li a {
@@ -61,7 +61,7 @@ ul li img {
 	margin-bottom: 15px;
 	transition: transform 0.3s ease;
 	height: 200px;
-	width: 350px;
+	width: 400px;
 }
 
 /* ul li a:hover {
