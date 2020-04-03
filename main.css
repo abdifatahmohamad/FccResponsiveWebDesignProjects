@@ -22,7 +22,7 @@ h1 {
 
 h2 {
 	position: relative;
-	margin-right: 40px;
+	margin-left: 40px;
 }
 
 h2::after {
