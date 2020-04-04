@@ -1,27 +1,54 @@
 const projects = [
-	'tribute-page',
-	'build-a-survey-form',
-	'build-a-product-landing-page',
-	'build-a-technical-documentation-page',
-	'build-a-personal-portfolio-webpage'
+	{
+		name: 'tribute-page',
+		github:
+			'https://github.com/abdifatahali/FccResponsiveWebDesignProjects/tree/master/tribute-page'
+	},
+	{
+		name: 'build-a-survey-form',
+		github:
+			'https://github.com/abdifatahali/FccResponsiveWebDesignProjects/tree/master/tribute-page'
+	},
+	{
+		name: 'build-a-product-landing-page',
+		github:
+			'https://github.com/abdifatahali/FccResponsiveWebDesignProjects/tree/master/tribute-page'
+	},
+	{
+		name: 'build-a-technical-documentation-page',
+		github:
+			'https://github.com/abdifatahali/FccResponsiveWebDesignProjects/tree/master/tribute-page'
+	},
+	{
+		name: 'build-a-personal-portfolio-webpage',
+		github:
+			'https://github.com/abdifatahali/FccResponsiveWebDesignProjects/tree/master/tribute-page'
+	}
 ];
 const list = document.getElementById('list');
 
-projects.forEach((project, i) => {
+projects.forEach(({ name, github }, i) => {
 	const listItem = document.createElement('li');
-	const link = document.createElement('a');
-	link.href = `/${project}/index.html`;
-	link.innerText = `${i + 1}. ${formatProjectName(project)}`;
 
-	const img = document.createElement('img');
-	img.src = `/${project}/images/desktop-design.jpg`;
+	listItem.innerHTML = `
+	<img src="/${name}/images/desktop-design.jpg" />
+	<p>${i + 1}. ${formatProjectName(name)}</p>
 
-	link.prepend(img); // makes the img on top of text
-	listItem.appendChild(link);
+
+	<div class="links-container">
+		<a href="/${name}/index.html" class="blue">
+			<i class="fa fa-eye" style="font-size:26px"></i>
+		</a>
+		<a href="${github}" class="github">
+			<i class="fa fa-github" style="font-size:26px"></i>
+		</a>
+	</div>
+	`;
+
 	list.appendChild(listItem);
 });
 
-// Get ride of (-) in the name projects
+// Get ride of (-)in the name projects
 
 function formatProjectName(name) {
 	return name
